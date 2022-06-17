@@ -1,0 +1,23 @@
+:root {
+  --mainColor: #222831; //swiss coffee DBD5D6
+  --secondColor: #F2F2F2; //thunder 282126
+  --thirdColor: #393E46; //Leather A5785D
+  --forthColor: #F96D00; //Roman Coffee
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue';
+}
+
+body {
+  background-color: var(--mainColor);
+  overflow: hidden;
+}

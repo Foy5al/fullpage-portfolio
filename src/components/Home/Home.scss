@@ -1,0 +1,101 @@
+.home-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--mainColor);
+}
+
+
+.container-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+    h1 {
+        position: absolute;
+        top: 10%;
+        font-family: 'Poppins';
+        color: var(--skin1);
+        font-size: 100px;
+        text-transform: uppercase;
+    }
+
+    .leftside {
+        position: absolute;
+        left: 0;
+        background-color: var(--mainColor);
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 10%;
+
+        h2 {
+            font-size: 30px;
+            color: var(--secondColor);
+            margin: 10px;
+            font-family: Poppins;
+
+            span {
+                font-size: 60px;
+                font-family: Righteous;
+                letter-spacing: 5px;
+                color: var(--forthColor);
+            }
+        }
+
+        h6 {
+            color: var(--secondColor);
+            font-size: 30px;
+            margin: 10px;
+            font-family: Quicksand;
+            letter-spacing: 2px;
+        }
+
+        button {
+            padding: 20px;
+            border-radius: 20px;
+            font-family: Quicksand;
+            font-size: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.5s ease-in;
+            border: none;
+            box-shadow: 0 2px 2px rgb(248, 122, 38);
+
+            &:hover {
+                color: var(--secondColor);
+                background-color: var(--forthColor);
+                font-size: 16px;
+                box-shadow: 0 3px 6px rgb(255, 255, 255);
+                transition: opacity 0.3s ease-out;
+            }
+        }
+    }
+
+    .rightside {
+        position: absolute;
+        right: 0;
+        background-color: var(--secondColor);
+        height: 100%;
+        width: 50%;
+
+    }
+}
+
+.myimg {
+    height: 100%;
+    width: 100%;
+    background: url(../../Assets/myimg.png)50% 50% no-repeat;
+    background-size: contain;
+}

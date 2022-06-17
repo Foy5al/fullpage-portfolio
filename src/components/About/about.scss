@@ -1,0 +1,115 @@
+.home-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--mainColor);
+}
+
+
+.container-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+
+    .leftside {
+
+        background-color: var(--mainColor);
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 20px;
+
+        h2 {
+            font-size: 30px;
+            color: var(--secondColor);
+            margin: 10px;
+            font-family: Poppins;
+
+            span {
+                font-size: 60px;
+                font-family: Quicksand;
+                letter-spacing: 5px;
+                color: var(--forthColor);
+            }
+        }
+
+        p {
+            color: var(--secondColor);
+            font-size: 20px;
+            margin: 10px;
+            font-family: Poppins;
+            letter-spacing: 1px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 20px;
+            border-radius: 20px;
+            font-family: Quicksand;
+            font-size: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.5s ease-in;
+            border: none;
+            box-shadow: 0 2px 2px rgb(248, 122, 38);
+
+            &:hover {
+                color: var(--secondColor);
+                background-color: var(--forthColor);
+                font-size: 16px;
+                box-shadow: 0 3px 6px rgb(255, 255, 255);
+                transition: opacity 0.3s ease-out;
+            }
+        }
+    }
+
+    .rightside {
+        background-color: var(--thirdColor);
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 20px;
+
+        h2 {
+            font-size: 30px;
+            color: var(--secondColor);
+            margin: 10px;
+            font-family: Poppins;
+
+        }
+
+        .skill-list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            color: var(--forthColor);
+
+            li {
+                color: var(--secondColor);
+                font-size: 20px;
+                margin: 10px;
+                font-family: Poppins;
+                letter-spacing: 1px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
