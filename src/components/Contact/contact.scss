@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 .contact-image {
     position: absolute;
     top: 50%;
@@ -29,3 +31,50 @@
         text-transform: uppercase;
     }
 }
+
+/* 
+@mixin breakpoint($size) {
+    @if $size ==mobile {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet-portrait-up {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet-landscape-up {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $size ==desktop-up {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==big-desktop-up {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}
+
+ */
+/* 
+.header {
+    @include breakpoint(mobile) {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    width:500px;
+    height:500px;
+    background-color: black;
+} */

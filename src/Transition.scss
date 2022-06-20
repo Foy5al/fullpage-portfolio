@@ -1,8 +1,20 @@
+#hideDivAfterAnimation {
+    animation: hideAnimation 0s ease-in 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
 .transition-effect {
-    position: absolute;
-    z-index: 100000000;
+    z-index: 10000;
     background-color: rgba(255, 118, 63, 0.89);
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }

@@ -1,30 +1,157 @@
+@import '../../../breakpoints.scss';
+
 .header {
-    position: absolute;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
     display: flex;
-    height: 150px;
+    justify-content: space-between;
+    position: absolute;
     width: 100%;
     z-index: 10000;
-    justify-content: space-between;
-    align-items: center;
     color: var(--secondColor);
 
     .logo {
+        @include breakpoint(tablet-landscape-up) {
+            font-size: 25px;
+            margin-left: 20px;
+            color: var(--forthColor);
+        }
+
+        @include breakpoint(tablet-portrait-up) {
+            font-size: 20px;
+            margin-left: 15px;
+            color: var(--forthColor);
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 15px;
+            margin-left: 15px;
+            color: var(--forthColor);
+        }
+
         margin-left: 30px;
         font-size: 30px;
         font-weight: bold;
         font-family: 'Monoton';
     }
+}
 
-    nav {
-        margin-top: 25px;
-        display: flex;
-        text-align: right;
-        flex-direction: column;
-        padding: 30px;
+.nav-container {
+    @include breakpoint(tablet-landscape-up) {
+        width: 20%;
+    }
+
+    @include breakpoint(tablet-portrait-up) {
+        width: 20%;
+    }
+
+    @include breakpoint(mobile) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        margin: auto;
+        overflow: hidden;
+        text-align: center;
         background-color: var(--secondColor);
-        border-bottom-left-radius: 10px;
+    }
 
-        a {
+
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: var(--secondColor);
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 10000;
+
+
+    ol {
+        @include breakpoint(mobile) {
+            flex-direction: row;
+            margin: 0;
+            align-items: center;
+            width: 100%;
+            list-style-type: none;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 20px;
+        margin-right: 30px;
+        padding-left: 10px;
+
+        li {
+            @include breakpoint(mobile) {
+                margin: auto;
+                width: auto;
+            }
+
+            margin-bottom: 15px;
+            font-family: 'Righteous';
+            font-size: 20px;
+
+            a {
+                text-decoration: none;
+                padding: 5px 0px;
+                font-weight: bold;
+                color: var(--mainColor);
+
+                &:hover {
+                    border-bottom: 2px solid var(--forthColor);
+                    transition: opacity 0.3s ease-in-out;
+                    ;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+/* nav {
+
+    .nav-container {
+        @include breakpoint(mobile) {}
+
+        @include breakpoint(tablet-portrait-up) {}
+
+        @include breakpoint(tablet-landscape-up) {}
+
+        @include breakpoint(desktop-up) {}
+
+        z-index: 110000;
+        background-color: var(--secondColor);
+        display: flex;
+        flex-direction: row;
+        width: 100px;
+        height: 100%;
+        color: white;
+    }
+} */
+
+
+
+/* display: flex;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    text-align: right;
+    flex-direction: row;
+    padding: 30px;
+    background-color: var(--secondColor);
+    z-index: 11000;
+    
+    a {
             text-decoration: none;
             font-family: 'Righteous';
             font-size: 20px;
@@ -37,7 +164,4 @@
                 border-bottom: 1px solid var(--forthColor);
             }
         }
-
-
-    }
-}
+    */

@@ -9,11 +9,11 @@ const Transition = ({ timeline }) => {
         timeline.to(trans.current, {
             duration: 4,
             x: 2500,
-            ease: Power4.easeOut
-        })
-    }, [])
+            ease: Power4.easeOut,
+        }, "-=3.5")
+    }, [timeline])
     return (
-        <div>
+        <div id="hideDivAfterAnimation">
             <div className="transition-effect" ref={trans}>
 
             </div>

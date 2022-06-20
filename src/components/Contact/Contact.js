@@ -25,6 +25,7 @@ const Contact = () => {
         <div>
             <Transition timeline={contact} />
             <div className="contact-image contact-overlay" ref={contactimg}> </div>
+            <div className='header'>Test div</div>
 
             <div className="contact-container">
                 <h1 ref={contacth1}>Under Development</h1>

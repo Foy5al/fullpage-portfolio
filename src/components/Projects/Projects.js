@@ -39,85 +39,85 @@ const Projects = () => {
         <div>
             <Transition timeline={project} />
 
-            <div className="project-image project-overlay" ref={projectimg}>
-                <Particles
-                    id="tsparticles"
-                    init={particlesInit}
-                    loaded={particlesLoaded}
-                    options={{
-                        background: {
-                            color: {
-                                value: "#F2F2F2",
-                            },
+            {/* <div className="project-image project-overlay" > */}
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    background: {
+                        color: {
+                            value: "#222831",
                         },
-                        fpsLimit: 120,
-                        interactivity: {
-                            events: {
-                                onClick: {
-                                    enable: true,
-                                    mode: "push",
-                                },
-                                onHover: {
-                                    enable: true,
-                                    mode: "repulse",
-                                },
-                                resize: true,
-                            },
-                            modes: {
-                                push: {
-                                    quantity: 4,
-                                },
-                                repulse: {
-                                    distance: 200,
-                                    duration: 0.4,
-                                },
-                            },
-                        },
-                        particles: {
-                            color: {
-                                value: "#222831",
-                            },
-
-                            collisions: {
+                    },
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onClick: {
                                 enable: true,
+                                mode: "push",
                             },
-                            move: {
-                                direction: "none",
+                            onHover: {
                                 enable: true,
-                                outModes: {
-                                    default: "bounce",
-                                },
-                                random: false,
-                                speed: 3,
-                                straight: false,
+                                mode: "repulse",
                             },
-                            number: {
-                                density: {
-                                    enable: true,
-                                    area: 800,
-                                },
-                                value: 80,
+                            resize: true,
+                        },
+                        modes: {
+                            push: {
+                                quantity: 4,
                             },
-                            opacity: {
-                                value: 0.5,
-                            },
-                            shape: {
-                                type: "circle",
-                            },
-                            size: {
-                                value: { min: 1, max: 5 },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
                             },
                         },
-                        detectRetina: true,
-                    }}
-                />
+                    },
+                    particles: {
+                        color: {
+                            value: "#F2F2F2",
+                        },
 
-            </div>
+                        collisions: {
+                            enable: true,
+                        },
+                        move: {
+                            direction: "none",
+                            enable: true,
+                            outModes: {
+                                default: "bounce",
+                            },
+                            random: false,
+                            speed: 3,
+                            straight: false,
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                area: 800,
+                            },
+                            value: 80,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        size: {
+                            value: { min: 1, max: 5 },
+                        },
+                    },
+                    detectRetina: true,
+                }}
+            />
+
+            {/* </div> */}
 
 
             <div className="projects-container">
                 <h1 ref={projecth1}>Projects</h1>
-                <div className="project-container">
+                <div ref={projectimg} className="project-container">
                     <div className='box box1'>
                         {/* <h2>Project Name: Health Haven Hospital</h2> */}
                     </div>

@@ -3,7 +3,7 @@ import Transition from '../../Transition';
 import './Home.scss'
 import gsap from 'gsap'
 import { useRef } from 'react';
-import Contact from '../Contact/Contact';
+import myimg from '../../Assets/myimg.png';
 
 const Home = () => {
     const home = gsap.timeline();
@@ -11,13 +11,13 @@ const Home = () => {
     const homeimg = useRef(null);
     useEffect(() => {
         home.from(homeh1.current, {
-            duration: .6,
+            duration: .3,
             skewX: 10,
             x: -100,
             opacity: 0
         }, "-=3.5")
         home.from(homeimg.current, {
-            duration: .5,
+            duration: .4,
             y: 200,
             opacity: 0
         }, "-=3")
@@ -30,10 +30,12 @@ const Home = () => {
                     <h2 ref={homeh1}> &mdash;Hello, I'm <br />
                         <span>Mohammad Foysal</span></h2>
                     <h6>&lt;&gt; Web Developer &lt;/&gt;</h6>
-                    <button>Download My Resume</button>
+                    <button ><span>Download Resume </span></button>
+                    {/* <button>test</button> */}
                 </div>
                 <div className="rightside">
                     <div ref={homeimg} className="myimg">
+                        <img src={myimg} alt="" />
                     </div>
                 </div>
             </div>

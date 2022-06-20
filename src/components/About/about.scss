@@ -1,3 +1,5 @@
+@import '../../breakpoints.scss';
+
 .home-image {
     position: absolute;
     top: 50%;
@@ -7,22 +9,23 @@
     height: 100%;
     overflow: hidden;
     background-color: var(--mainColor);
+
 }
 
 
 .container-about {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     width: 80vw;
     height: 100vh;
     margin: auto;
 
-    .leftside {
 
+    .leftside {
         background-color: var(--mainColor);
         height: 100%;
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: start;
@@ -76,7 +79,7 @@
     .rightside {
         background-color: var(--thirdColor);
         height: 100%;
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: start;
