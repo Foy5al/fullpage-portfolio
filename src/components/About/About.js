@@ -37,7 +37,8 @@ const About = () => {
                     <p>&lt;&gt; I have two leading passion in my life: one is to create and another is to explore. I love to create website, Graphics desing and making animation give me lot of joy. I always try to learn new thing never like to limit my self in a box. Currently looking for an internship with a reputable IT firm that has room
                         for growth. desire to work as a MERN stack developer and quickly learn new technologies &lt;/&gt;</p>
 
-                    <button>Download My Resume</button>
+
+                    <button ><span>Download Resume </span></button>
                 </div>
                 <div ref={aboutimg} className="rightside skill">
                     <h2 ref={abouth1}> &mdash;My Skills <br /></h2>
@@ -67,7 +68,7 @@ const About = () => {
 
                             <li><ul>Graphics
                                 <li>&rsaquo;&rsaquo; Graphics </li>
-                                <li>&rsaquo;&rsaquo; CSS</li>
+                                <li>&rsaquo;&rsaquo; Photoshop</li>
                                 <li>&rsaquo;&rsaquo; Illustrator</li></ul></li>
 
                             <li><ul>Computer Network

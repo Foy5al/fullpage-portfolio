@@ -31,7 +31,6 @@ const Home = () => {
                         <span>Mohammad Foysal</span></h2>
                     <h6>&lt;&gt; Web Developer &lt;/&gt;</h6>
                     <button ><span>Download Resume </span></button>
-                    {/* <button>test</button> */}
                 </div>
                 <div className="rightside">
                     <div ref={homeimg} className="myimg">

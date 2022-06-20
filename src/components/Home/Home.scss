@@ -1,4 +1,5 @@
 @import '../../breakpoints.scss';
+@import '../../common.scss';
 
 .container-home {
     @include breakpoint(tablet-landscape-up) {
@@ -102,77 +103,6 @@
             font-family: Quicksand;
             letter-spacing: 2px;
         }
-
-        button {
-            display: inline-block;
-            border-radius: 4px;
-            // background-color: var(--forthColor);
-            box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-            background-image: linear-gradient(to right, var(--forthColor) 0%, var(--secondColor) 50%, var(--forthColor) 100%);
-            border: none;
-            color: var(--mainColor);
-            text-align: center;
-            font-family: "Quicksand";
-            border-radius: 6px;
-            font-size: 25px;
-            padding: 20px;
-            width: 300px;
-            background-size: 200% auto;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-            text-transform: uppercase;
-
-            &:hover {
-                background-position: right center;
-            }
-
-            span {
-                cursor: pointer;
-                display: inline-block;
-                position: relative;
-                transition: 0.5s;
-
-                &::after {
-                    content: '\2B73';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
-                    transition: 0.5s;
-                }
-            }
-
-            &:hover span {
-                padding-right: 25px;
-            }
-
-            &:hover span::after {
-                opacity: 1;
-                right: 0;
-            }
-        }
-
-        /*  button {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1em;
-            text-transform: uppercase;
-            color: var(--secondColor);
-
-            margin: 10px;
-            padding: 1em 3em;
-            color: white;
-            box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-            background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
-            transition: 0.5s;
-
-            &:hover {
-                background-position: right center;
-            }
-        }*/
 
     }
 

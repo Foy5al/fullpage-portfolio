@@ -1,0 +1,132 @@
+// common container 
+.common-container {
+    @include breakpoint(tablet-landscape-up) {
+        display: block;
+        overflow-y: scroll;
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+    }
+
+    @include breakpoint(tablet-portrait-up) {
+        display: block;
+        overflow-y: scroll;
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        overflow-y: scroll;
+        width: 100%;
+        height: auto;
+        margin-top: 15%;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+
+
+    .common-leftside {
+        @include breakpoint(tablet-landscape-up) {
+            width: 80%;
+            height: auto;
+        }
+
+        @include breakpoint(tablet-portrait-up) {
+            width: 80%;
+            height: auto;
+        }
+
+        @include breakpoint(mobile) {
+            height: auto;
+            margin: auto;
+        }
+
+        background-color: var(--mainColor);
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 20px;
+
+
+        .common-rightside {
+            @include breakpoint (mobile) {
+                height: auto;
+            }
+
+            background-color: var(--thirdColor);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+}
+
+button {
+    @include breakpoint(mobile) {
+        width: 300px;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
+    0 1px 3px rgba(0, 0, 0, .08);
+    background-image: linear-gradient(to right, var(--forthColor) 0%, var(--secondColor) 50%, var(--forthColor) 100%);
+    border: none;
+    color: var(--mainColor);
+    text-align: center;
+    font-family: "Quicksand";
+    border-radius: 6px;
+    font-size: 25px;
+    padding: 20px;
+    width: 300px;
+    background-size: 200% auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-position: right center;
+    }
+
+    span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+
+        &::after {
+            content: '⭳';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+    }
+
+    &:hover span {
+        padding-right: 25px;
+    }
+
+    &:hover span::after {
+        opacity: 1;
+        right: 0;
+    }
+}

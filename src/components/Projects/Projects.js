@@ -40,7 +40,7 @@ const Projects = () => {
             <Transition timeline={project} />
 
             {/* <div className="project-image project-overlay" > */}
-            <Particles
+            {/* <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -110,7 +110,7 @@ const Projects = () => {
                     },
                     detectRetina: true,
                 }}
-            />
+            /> */}
 
             {/* </div> */}
 
@@ -119,9 +119,15 @@ const Projects = () => {
                 <h1 ref={projecth1}>Projects</h1>
                 <div ref={projectimg} className="project-container">
                     <div className='box box1'>
-                        {/* <h2>Project Name: Health Haven Hospital</h2> */}
+                        <h2>Project Name: Health Haven Hospital</h2>
                     </div>
                     <div className='box box2'>
+                        {/* <h2>Project Name: Health Haven Hospital</h2> */}
+                    </div>
+                    <div className='box box3'>
+                        {/* <h2>Project Name: Health Haven Hospital</h2> */}
+                    </div>
+                    <div className='box box4'>
                         {/* <h2>Project Name: Health Haven Hospital</h2> */}
                     </div>
                 </div>
