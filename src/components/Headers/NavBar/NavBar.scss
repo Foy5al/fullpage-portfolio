@@ -105,11 +105,6 @@
                 font-weight: bold;
                 color: var(--mainColor);
 
-                &:hover {
-                    border-bottom: 2px solid var(--forthColor);
-                    transition: opacity 0.3s ease-in-out;
-                    ;
-                }
             }
         }
 

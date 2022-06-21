@@ -1,50 +1,154 @@
-.project-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@import '../../breakpoints.scss';
+
+#project {
     width: 100%;
-    height: 100%;
+    overflow-x: hidden;
+    height: auto;
     overflow-y: scroll;
-    background-color: none;
 }
 
-/* .project-overlay {
-    background: url(../../Assets/Busy.gif)50% 50% no-repeat;
-    background-size: cover;
-    -webkit-filter: blur(5px);
-    filter: blur(2px);
-} */
+h1 {
+    @include breakpoint(big-desktop-up) {
+        width: 100%;
+    }
+
+    @include breakpoint(desktop-up) {
+        width: 100%;
+    }
+
+    @include breakpoint(tablet-portrait-up) {
+        margin-top: 10%;
+        font-size: 40px;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 25%;
+        width: 100%;
+        border-radius: 50px;
+        font-size: 30px;
+        margin-bottom: 10px;
+        border-bottom: 5px solid var(--forthColor);
+    }
+
+    width: 80%;
+    font-family: 'Poppins';
+    color: var(--skin1);
+    font-size: 100px;
+    color: var(--secondColor);
+    text-transform: uppercase;
+    text-align: center;
+}
 
 .projects-container {
+    @include breakpoint(tablet-landscape-up) {
+        margin: 0;
+    }
+
+    @include breakpoint(tablet-portrait-up) {
+        width: 80%;
+        margin: auto;
+        align-items: flex-start;
+        justify-content: start;
+    }
+
+    width: 80%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    height: auto;
+    margin-bottom: 20px;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-
-    h1 {
-        font-family: 'Poppins';
-        color: var(--skin1);
-        font-size: 100px;
-        color: var(--secondColor);
-        text-transform: uppercase;
-    }
 }
 
 .project-container {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: auto;
+    margin-bottom: 20px;
+    background-color: var(--thirdColor);
+    border-radius: 20px;
+    margin-left: 20px;
+
+    h2 {
+
+        @include breakpoint(tablet-portrait-up) {
+            font-size: 25px;
+        }
+
+        color: var(--forthColor);
+        font-family: "Quicksand";
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .techbox-container {
+        @include breakpoint(tablet-portrait-up) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint(mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        p {
+            display: inline;
+            color: var(--secondColor);
+            padding: 10px;
+            font-size: 20px;
+
+        }
+
+        // technology span
+        span {
+            @include breakpoint(mobile) {
+                margin-bottom: 2px;
+                height: 20px;
+                text-align: center;
+            }
+
+            background-color: var(--secondColor);
+            color: var(--thirdColor);
+            padding: 5px;
+            margin-left: 5px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    div {
+        text-align: end;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        padding: 10px;
+        margin: auto;
+
+        a {
+            margin-left: 5px;
+        }
+
+
+    }
 }
 
 .project-container .box {
-    margin-top: 10px;
+    @include breakpoint(tablet-landscape-up) {
+        width: fill;
+        height: 400px;
+    }
+
+    @include breakpoint(tablet-portrait-up) {
+        width: fill;
+        height: 300px;
+    }
+
+    @include breakpoint(mobile) {
+        width: fill;
+        height: 280px;
+    }
+
+    border-radius: 20px;
     width: 580px;
     height: 400px;
     background: #000;

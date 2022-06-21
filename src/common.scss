@@ -1,78 +1,33 @@
-// common container 
-.common-container {
-    @include breakpoint(tablet-landscape-up) {
-        display: block;
-        overflow-y: scroll;
-        width: 100%;
-        height: auto;
-        margin-top: 15%;
+// common link  
+a {
+    display: inline-block;
+    position: relative;
+    color: var(--secondColor);
+    font-size: 20px;
+
+    &:hover {
+        color: var(--forthColor);
+        transition: all 0.25s ease-in-out;
     }
+}
 
-    @include breakpoint(tablet-portrait-up) {
-        display: block;
-        overflow-y: scroll;
-        width: 100%;
-        height: auto;
-        margin-top: 15%;
-    }
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--forthColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
 
-    @include breakpoint(mobile) {
-        display: block;
-        overflow-y: scroll;
-        width: 100%;
-        height: auto;
-        margin-top: 15%;
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-    height: 100vh;
-    margin: auto;
-
-
-    .common-leftside {
-        @include breakpoint(tablet-landscape-up) {
-            width: 80%;
-            height: auto;
-        }
-
-        @include breakpoint(tablet-portrait-up) {
-            width: 80%;
-            height: auto;
-        }
-
-        @include breakpoint(mobile) {
-            height: auto;
-            margin: auto;
-        }
-
-        background-color: var(--mainColor);
-        height: 90%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        padding: 20px;
-
-
-        .common-rightside {
-            @include breakpoint (mobile) {
-                height: auto;
-            }
-
-            background-color: var(--thirdColor);
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            flex-direction: column;
-            padding: 20px;
-        }
-    }
+a:hover:after {
+    text-decoration: none;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 button {
