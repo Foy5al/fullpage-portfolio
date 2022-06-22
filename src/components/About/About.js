@@ -34,8 +34,7 @@ const About = () => {
                 <div className="leftside about">
                     <h2 ref={abouth1}> &mdash;About Me <br />
                         <span>I'm a Full Stack web developer working from home</span></h2>
-                    <p>&lt;&gt; I have two leading passion in my life: one is to create and another is to explore. I love to create website, Graphics desing and making animation give me lot of joy. I always try to learn new thing never like to limit my self in a box. Currently looking for an internship with a reputable IT firm that has room
-                        for growth. desire to work as a MERN stack developer and quickly learn new technologies &lt;/&gt;</p>
+                    <p>&lt;&gt; I have two leading passions in my life: one is to create and another is to explore. I love to create websites, and Graphics design and making animation give me a lot of joy. I always try to learn new things and never like to limit myself to a box. I currently looking for an internship with a reputable IT firm that has room for growth. Desire to work as a MERN stack developer and quickly learn new technologies. &lt;/&gt;</p>
 
 
                     <button ><span>Download Resume </span></button>
