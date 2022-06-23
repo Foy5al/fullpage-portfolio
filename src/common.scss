@@ -6,7 +6,7 @@ a {
     font-size: 20px;
 
     &:hover {
-        color: var(--forthColor);
+        color: var(--thirdColor);
         transition: all 0.25s ease-in-out;
     }
 }
@@ -41,7 +41,7 @@ button {
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11),
     0 1px 3px rgba(0, 0, 0, .08);
-    background-image: linear-gradient(to right, var(--forthColor) 0%, var(--secondColor) 50%, var(--forthColor) 100%);
+    background-image: linear-gradient(to right, var(--forthColor) 0%, #ffa35c 50%, var(--forthColor) 100%);
     border: none;
     color: var(--mainColor);
     text-align: center;

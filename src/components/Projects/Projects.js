@@ -123,7 +123,7 @@ const Projects = () => {
 
                     <div className="project-container">
 
-                        <div className='box box3'></div>
+                        <div className='box box1'></div>
                         <h2>Name: Weather App</h2>
                         <div className='techbox-container'>
                             <p>Technology:</p>

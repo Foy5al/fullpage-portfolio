@@ -1,80 +1,291 @@
 @import '../../breakpoints.scss';
 
-.contact-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
-    background-color: var(--mainColor);
-}
-
-.contact-overlay {
-    background: url(../../Assets/img2.jpg)50% 50% no-repeat;
-    background-size: cover;
+h1 {
+    font-family: 'Poppins';
+    color: var(--secondColor);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .contact-container {
+    @include breakpoint (tablet-landscape-up) {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    @include breakpoint (tablet-portrait-up) {
+        flex-direction: column;
+    }
+
+    @include breakpoint (mobile) {
+        flex-direction: column;
+    }
+
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+
+    // contact info start here
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 1% 1%;
+        justify-content: center;
+    }
+
+    // location info start here
+    .location-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        padding: 1% 1%;
+
+        a {
+            width: 100%;
+            font-family: Poppins;
+            font-size: large;
+            padding: 1rem;
+            height: auto;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--forthColor);
+            }
+        }
+
+
+
+        .iframe {
+            width: 100%;
+            height: 50%;
+        }
+    }
+}
+
+
+.screen {
+    position: relative;
+    margin: auto;
+    background: var(--mainColor);
+    border-radius: 15px;
+}
+
+.screen:after {
+    content: '';
+    display: block;
     position: absolute;
     top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+}
 
-    h1 {
-        font-family: 'Poppins';
-        color: var(--secondColor);
-        font-size: 100px;
-        text-transform: uppercase;
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--thirdColor);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+    margin-right: auto;
+}
+
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+
+.screen-header-button.close {
+    background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+    background: #e8e925;
+}
+
+.screen-header-button.minimize {
+    background: #74c54f;
+}
+
+.screen-header-right {
+    display: flex;
+}
+
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: var(--secondColor);
+}
+
+.screen-body {
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--forthColor);
+    font-size: 26px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: var(--forthColor);
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 1rem;
+    color: #888;
+
+    a {
+        text-decoration: none;
+        margin-top: auto;
+        font-size: 1rem;
+        color: #888;
     }
 }
 
-/* 
-@mixin breakpoint($size) {
-    @if $size ==mobile {
-        @media (max-width: 599px) {
-            @content;
-        }
-    }
+.app-form-group {
+    margin-bottom: 15px;
 
-    @else if $size ==tablet-portrait-up {
-        @media (min-width: 600px) {
-            @content;
-        }
-    }
-
-    @else if $size ==tablet-landscape-up {
-        @media (min-width: 900px) {
-            @content;
-        }
-    }
-
-    @else if $size ==desktop-up {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
-
-    @else if $size ==big-desktop-up {
-        @media (min-width: 1800px) {
-            @content;
-        }
+    .message {
+        margin-top: 40px;
     }
 }
 
- */
-/* 
-.header {
-    @include breakpoint(mobile) {
-        width: 100px;
-        height: 100px;
-        background-color: red;
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+
+.app-form-control:focus {
+    border-bottom-color: var(--secondColor);
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: var(--forthColor);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    color: var(--secondColor);
+}
+
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffa4bd;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.credits-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
     }
 
-    width:500px;
-    height:500px;
-    background-color: black;
-} */
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
+}
