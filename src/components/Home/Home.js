@@ -21,7 +21,12 @@ const Home = () => {
             y: 200,
             opacity: 0
         }, "-=3")
-    }, [])
+    }, []);
+
+    const viewResume = () => {
+        const link = `https://drive.google.com/file/d/17NxXqoU7NuBy2slhn-wVES8Ko4-Pv5iG/view?usp=sharing`;
+        window.open(link, "_blank");
+    }
     return (
         <div>
             <Transition timeline={home} />
@@ -30,7 +35,7 @@ const Home = () => {
                     <h2 ref={homeh1}> &mdash;Hello, I'm <br />
                         <span>Mohammad Foysal</span></h2>
                     <h6>&lt;&gt; Web Developer &lt;/&gt;</h6>
-                    <button ><span>Download Resume </span></button>
+                    <button onClick={() => { viewResume() }}><span>View Resume</span></button>
                 </div>
                 <div className="rightside">
                     <div ref={homeimg} className="myimg">

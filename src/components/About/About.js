@@ -26,7 +26,11 @@ const About = () => {
             y: -200,
             opacity: 0
         }, "-=3")
-    }, [])
+    }, []);
+    const downloadResume = () => {
+        const link = `https://drive.google.com/uc?export=download&id=17NxXqoU7NuBy2slhn-wVES8Ko4-Pv5iG`
+        window.location.replace(link);
+    }
     return (
         <div>
             <Transition timeline={about} />
@@ -37,7 +41,7 @@ const About = () => {
                     <p>&lt;&gt; I have two leading passions in my life: one is to create and another is to explore. I love to create websites, and Graphics design and making animation give me a lot of joy. I always try to learn new things and never like to limit myself to a box. I currently looking for an internship with a reputable IT firm that has room for growth. Desire to work as a MERN stack developer and quickly learn new technologies. &lt;/&gt;</p>
 
 
-                    <button ><span>Download Resume </span></button>
+                    <button onClick={() => { downloadResume() }} ><span>Download Resume </span></button>
                 </div>
                 <div ref={aboutimg} className="rightside skill">
                     <h2 ref={abouth1}> &mdash;My Skills <br /></h2>
