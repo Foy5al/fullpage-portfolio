@@ -1,24 +1,34 @@
 @import '../../breakpoints.scss';
 
 h1 {
+    @include breakpoint (tablet-portrait-up) {
+        margin-top: 10px;
+    }
+
     font-family: 'Poppins';
     color: var(--secondColor);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
 .contact-container {
     @include breakpoint (tablet-landscape-up) {
         flex-direction: column;
-        width: 80%;
+        width: 75%;
+        margin-top: 10%;
+        overflow-y: scroll;
     }
 
     @include breakpoint (tablet-portrait-up) {
         flex-direction: column;
+        width: 75%;
+        overflow-y: scroll;
     }
 
     @include breakpoint (mobile) {
         flex-direction: column;
+        margin-top: 15%;
+        overflow-y: scroll;
     }
 
     display: flex;
@@ -30,6 +40,15 @@ h1 {
 
     // contact info start here
     .contact-info {
+        @include breakpoint (tablet-portrait-up) {
+            width: 90%;
+            overflow-y: visible;
+        }
+
+        @include breakpoint (mobile) {
+            width: 90%;
+        }
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -73,6 +92,12 @@ h1 {
 
 
 .screen {
+    @include breakpoint (tablet-portrait-up) {
+        display: block;
+        width: 100%;
+
+    }
+
     position: relative;
     margin: auto;
     background: var(--mainColor);

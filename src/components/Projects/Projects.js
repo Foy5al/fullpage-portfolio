@@ -4,7 +4,7 @@ import Particles from 'react-tsparticles';
 import Transition from '../../Transition';
 import './Projects.scss';
 import { loadFull } from "tsparticles";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Projects = () => {
@@ -132,7 +132,7 @@ const Projects = () => {
                             <span className='techbox'>Weather Api</span>
                         </div>
                         <div>
-                            <Link>See Details</Link>
+                            <NavLink to={{ pathname: 'https://github.com/Foy5al/healthcare-service-app' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
                             <a href="https://healthcare-service-react-app.web.app/" target="_blank" rel="noopener noreferrer">Live preview</a>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ const Projects = () => {
 
                         </div>
                         <div>
-                            <Link>See Details</Link>
+                            <NavLink to={{ pathname: 'https://github.com/Foy5al/react-skillSquid-education-app' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
                             <a href="https://react-skillsquid-e-learning.netlify.app/" target="_blank" rel="noopener noreferrer">Live preview</a>
                         </div>
 
@@ -165,7 +165,7 @@ const Projects = () => {
                             <span className='techbox'>Weather Api</span>
                         </div>
                         <div>
-                            <Link>See Details</Link>
+                            <NavLink to={{ pathname: 'https://github.com/Foy5al/weather-info-checker' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
                             <a href="https://weather-info-checker.netlify.app/" target="_blank" rel="noopener noreferrer">Live preview</a>
                         </div>
                     </div>
