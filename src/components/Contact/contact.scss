@@ -1,13 +1,24 @@
 @import '../../breakpoints.scss';
 
 h1 {
+    @include breakpoint (tablet-landscape-up) {
+        margin-top: 10px;
+        overflow-y: scroll;
+        font-size: 50px
+    }
+
     @include breakpoint (tablet-portrait-up) {
         margin-top: 10px;
+        font-size: 40px
+    }
+
+    @include breakpoint (mobile) {
+        font-size: 40px
     }
 
     font-family: 'Poppins';
     color: var(--secondColor);
-    font-size: 1.5rem;
+    font-size: 80px;
     text-transform: uppercase;
 }
 
@@ -15,7 +26,6 @@ h1 {
     @include breakpoint (tablet-landscape-up) {
         flex-direction: column;
         width: 75%;
-        margin-top: 10%;
         overflow-y: scroll;
     }
 
@@ -29,6 +39,7 @@ h1 {
         flex-direction: column;
         margin-top: 15%;
         overflow-y: scroll;
+        width: 100%;
     }
 
     display: flex;
@@ -46,7 +57,9 @@ h1 {
         }
 
         @include breakpoint (mobile) {
-            width: 90%;
+            width: 95%;
+            margin: auto;
+            margin-top: 25px;
         }
 
         display: flex;
@@ -60,6 +73,17 @@ h1 {
 
     // location info start here
     .location-info {
+        @include breakpoint (tablet-portrait-up) {
+            width: 90%;
+            overflow-y: visible;
+            height: 500px;
+        }
+
+        @include breakpoint (mobile) {
+            width: 95%;
+            margin: auto;
+        }
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -92,10 +116,17 @@ h1 {
 
 
 .screen {
-    @include breakpoint (tablet-portrait-up) {
-        display: block;
-        width: 100%;
+    @include breakpoint (tablet-landscape-up) {
+        width: 90%;
+    }
 
+    @include breakpoint (tablet-portrait-up) {
+        width: 100%;
+    }
+
+    @include breakpoint (mobile) {
+        width: 100%;
+        margin: auto;
     }
 
     position: relative;
@@ -118,6 +149,11 @@ h1 {
 }
 
 .screen-header {
+    @include breakpoint (tablet-landscape-up) {
+        padding: 10px;
+    }
+
+
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -164,28 +200,63 @@ h1 {
 }
 
 .screen-body {
+    @include breakpoint (tablet-portrait-up) {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    @include breakpoint (mobile) {
+        flex-direction: column;
+    }
+
     display: flex;
 }
 
 .screen-body-item {
+    @include breakpoint (mobile) {
+        padding: 0;
+    }
+
     flex: 1;
     padding: 50px;
 }
 
 .screen-body-item.left {
+    @include breakpoint(mobile) {
+        margin-bottom: 30px;
+    }
+
     display: flex;
     flex-direction: column;
 }
 
 .app-title {
+    @include breakpoint (tablet-portrait-up) {
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint (mobile) {
+        flex-direction: row;
+    }
+
     display: flex;
     flex-direction: column;
     position: relative;
     color: var(--forthColor);
     font-size: 26px;
+
+    span {
+        @include breakpoint (mobile) {
+            margin-right: 12px;
+        }
+    }
 }
 
 .app-title:after {
+    @include breakpoint (mobile) {
+        display: none;
+    }
+
     content: '';
     display: block;
     position: absolute;
@@ -284,33 +355,33 @@ h1 {
 }
 
 @media screen and (max-width: 520px) {
-    .screen-body {
+    /* .screen-body {
         flex-direction: column;
-    }
+    } */
 
-    .screen-body-item.left {
+    /* .screen-body-item.left {
         margin-bottom: 30px;
-    }
+    } */
 
-    .app-title {
+    /* .app-title {
         flex-direction: row;
-    }
+    } */
 
-    .app-title span {
+    /* .app-title span {
         margin-right: 12px;
-    }
+    } */
 
-    .app-title:after {
+    /*  .app-title:after {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 600px) {
-    .screen-body {
+    /* .screen-body {
         padding: 40px;
-    }
+    } */
 
-    .screen-body-item {
+    /* .screen-body-item {
         padding: 0;
-    }
+    } */
 }
