@@ -137,6 +137,11 @@ h1 {
 }
 
 .project-container .box {
+    @include breakpoint(desktop-up) {
+        width: fill;
+        height: 400px;
+    }
+
     @include breakpoint(tablet-landscape-up) {
         width: fill;
         height: 400px;

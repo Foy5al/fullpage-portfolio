@@ -2,6 +2,11 @@
 
 
 .container-about {
+    @include breakpoint(desktop-up) {
+        display: flex;
+        width: 80%;
+    }
+
     @include breakpoint(tablet-landscape-up) {
         display: block;
         overflow-y: scroll;
@@ -32,6 +37,7 @@
     width: 80vw;
     height: 100vh;
     margin: auto;
+    overflow-y: hidden;
 
 
     .leftside {
@@ -71,6 +77,10 @@
             font-family: Poppins;
 
             span {
+                @include breakpoint(desktop-up) {
+                    font-size: 45px;
+                }
+
                 @include breakpoint(mobile) {
                     font-size: 40px;
                 }
@@ -83,20 +93,29 @@
         }
 
         p {
+            @include breakpoint(desktop-up) {
+                width: 90%;
+                padding: auto;
+                font-size: 18px;
+            }
+
             @include breakpoint(tablet-landscape-up) {
                 width: 90%;
                 padding: auto;
                 text-align: justify;
                 text-justify: inter-word;
+                font-size: 18px;
             }
 
             @include breakpoint(tablet-portrait-up) {
                 width: 80%;
                 padding: auto;
+                font-size: 18px;
             }
 
             @include breakpoint(mobile) {
                 width: 85%;
+                font-size: 18px;
             }
 
             color: var(--secondColor);
@@ -113,6 +132,10 @@
     }
 
     .rightside {
+        @include breakpoint (desktop-up) {
+            height: 100vh;
+        }
+
         @include breakpoint (mobile) {
             height: auto;
         }
