@@ -1,24 +1,24 @@
 @import '../../breakpoints.scss';
 
-h1 {
+#contact-heading {
     @include breakpoint (tablet-landscape-up) {
         margin-top: 10px;
         overflow-y: scroll;
-        font-size: 50px
+        font-size: 50px;
     }
 
     @include breakpoint (tablet-portrait-up) {
         margin-top: 10px;
-        font-size: 40px
+        font-size: 40px;
     }
 
     @include breakpoint (mobile) {
-        font-size: 40px
+        font-size: 40px;
     }
 
+    font-size: 60px;
     font-family: 'Poppins';
     color: var(--secondColor);
-    font-size: 80px;
     text-transform: uppercase;
 }
 
@@ -118,6 +118,7 @@ h1 {
 .screen {
     @include breakpoint (tablet-landscape-up) {
         width: 90%;
+        // margin-top: 20%;
     }
 
     @include breakpoint (tablet-portrait-up) {
@@ -279,13 +280,14 @@ h1 {
     }
 }
 
-.app-form-group {
+/* .app-form-group {
     margin-bottom: 15px;
 
     .message {
         margin-top: 40px;
+        height: 25px;
     }
-}
+} */
 
 .app-form-group.buttons {
     margin-bottom: 0;
@@ -300,7 +302,7 @@ h1 {
     border-bottom: 1px solid #666;
     color: #ddd;
     font-size: 14px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     outline: none;
     transition: border-color .2s;
 }

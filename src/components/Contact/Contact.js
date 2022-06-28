@@ -2,9 +2,12 @@ import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import Iframe from 'react-iframe';
 import Transition from '../../Transition';
-import './contact.scss'
+import './contact.scss';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
     const contact = gsap.timeline();
     const contacth1 = useRef(null);
     const contactimg = useRef(null);
@@ -23,55 +26,76 @@ const Contact = () => {
             y: -200,
             opacity: 0
         }, "-=3")
-    }, [])
+    }, []);
+
+    const sendEmail = e => {
+        e.preventDefault();
+        // console.log("form is trigged", form.current, process.env.REACT_APP_SERVICE_PROVIDER);
+
+        emailjs.sendForm(`${process.env.REACT_APP_SERVICE_PROVIDER}`, `${process.env.REACT_APP_TEMPLATE_PROVIDER}`, form.current, `${process.env.REACT_APP_USER}`)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
     return (
         <div>
             <Transition timeline={contact} />
-            <h1 ref={contacth1}>Contact</h1>
+            <h1 id='contact-heading' ref={contacth1}>Contact</h1>
 
             <div className='contact-container'>
 
                 <div ref={contactimg} className="contact-info">
-                    <div class="screen">
-                        <div class="screen-header">
-                            <div class="screen-header-left">
-                                <div class="screen-header-button close"></div>
-                                <div class="screen-header-button maximize"></div>
-                                <div class="screen-header-button minimize"></div>
+                    <div className="screen">
+                        <div className="screen-header">
+                            <div className="screen-header-left">
+                                <div className="screen-header-button close"></div>
+                                <div className="screen-header-button maximize"></div>
+                                <div className="screen-header-button minimize"></div>
                             </div>
-                            <div class="screen-header-right">
-                                <div class="screen-header-ellipsis"></div>
-                                <div class="screen-header-ellipsis"></div>
-                                <div class="screen-header-ellipsis"></div>
+                            <div className="screen-header-right">
+                                <div className="screen-header-ellipsis"></div>
+                                <div className="screen-header-ellipsis"></div>
+                                <div className="screen-header-ellipsis"></div>
                             </div>
                         </div>
-                        <div class="screen-body">
-                            <div class="screen-body-item left">
-                                <div class="app-title">
+                        <div className="screen-body">
+                            <div className="screen-body-item left">
+                                <div className="app-title">
                                     <span>Get In</span>
                                     <span>Touch</span>
                                 </div>
-                                <div class="app-contact">CONTACT INFO : <a href="tel:+8801680386886">+8801680386886</a></div>
+                                <div className="app-contact">CONTACT INFO : <a href="tel:+8801680386886">+8801680386886</a></div>
                             </div>
-                            <div class="screen-body-item">
-                                <div class="app-form">
-                                    <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="NAME" />
+                            <div className="screen-body-item">
+                                <form ref={form} className="app-form" onSubmit={sendEmail}>
+                                    {/* <div className="app-form-group">
+                                        <input className="app-form-control" placeholder="NAME" />
                                     </div>
-                                    <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="EMAIL" />
+                                    <div className="app-form-group">
+                                        <input className="app-form-control" placeholder="EMAIL" />
                                     </div>
-                                    <div class="app-form-group">
-                                        <input class="app-form-control" placeholder="CONTACT NO" />
+                                    <div className="app-form-group">
+                                        <input className="app-form-control" placeholder="CONTACT NO" />
                                     </div>
-                                    <div class="app-form-group message">
-                                        <textarea class="app-form-control" placeholder="MESSAGE" />
+                                    <div className="app-form-group message">
+                                        <textarea className="app-form-control" placeholder="MESSAGE" />
                                     </div>
-                                    <div class="app-form-group buttons">
-                                        <button class="app-form-button">CANCEL</button>
-                                        <button class="app-form-button">SEND</button>
-                                    </div>
-                                </div>
+                                    <div className="app-form-group buttons">
+                                        <input className="app-form-button" type="submit" value="S E N D" />
+                                    </div> */}
+
+                                    <input className="app-form-control" placeholder="NAME" name="user_name" />
+                                    <input className="app-form-control" placeholder="EMAIL" name="user_email" />
+
+                                    <input className="app-form-control" placeholder="CONTACT NO" name="contact" />
+
+                                    <textarea className="app-form-control" placeholder="MESSAGE" name="message" />
+
+                                    <input className="app-form-button" type="submit" value="S E N D" />
+
+                                </form>
                             </div>
                         </div>
                     </div>
