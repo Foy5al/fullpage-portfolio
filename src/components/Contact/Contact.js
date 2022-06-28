@@ -85,15 +85,18 @@ const Contact = () => {
                                     <div className="app-form-group buttons">
                                         <input className="app-form-button" type="submit" value="S E N D" />
                                     </div> */}
+                                    <label className='app-form-label' >Name</label>
+                                    <input className="app-form-control" required placeholder="NAME" name="user_name" />
 
-                                    <input className="app-form-control" placeholder="NAME" name="user_name" />
-                                    <input className="app-form-control" placeholder="EMAIL" name="user_email" />
+                                    <input type="email" required className="app-form-control" placeholder="EMAIL" name="user_email" />
 
-                                    <input className="app-form-control" placeholder="CONTACT NO" name="contact" />
+                                    <input type="number" className="app-form-control" placeholder="CONTACT NO" name="contact" />
 
-                                    <textarea className="app-form-control" placeholder="MESSAGE" name="message" />
+                                    <textarea className="app-form-control message" placeholder="MESSAGE" name="message" />
 
-                                    <input className="app-form-button" type="submit" value="S E N D" />
+                                    <span className="form-button-container">
+                                        <input className="app-form-button" type="submit" value="S E N D" />
+                                    </span>
 
                                 </form>
                             </div>

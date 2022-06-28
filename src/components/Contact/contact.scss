@@ -14,6 +14,7 @@
 
     @include breakpoint (mobile) {
         font-size: 40px;
+        padding-top: 20px;
     }
 
     font-size: 60px;
@@ -99,9 +100,14 @@
             padding: 1rem;
             height: auto;
             text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+            text-align: center;
 
             &:hover {
                 color: var(--forthColor);
+                border-radius: 5px;
+                transition: all ease-in-out;
             }
         }
 
@@ -215,6 +221,8 @@
 .screen-body-item {
     @include breakpoint (mobile) {
         padding: 0;
+        padding: 20px;
+
     }
 
     flex: 1;
@@ -280,21 +288,13 @@
     }
 }
 
-/* .app-form-group {
-    margin-bottom: 15px;
-
-    .message {
-        margin-top: 40px;
-        height: 25px;
-    }
-} */
-
 .app-form-group.buttons {
     margin-bottom: 0;
     text-align: right;
 }
 
 .app-form-control {
+    height: 25px;
     width: 100%;
     padding: 10px 0;
     background: none;
@@ -307,12 +307,32 @@
     transition: border-color .2s;
 }
 
+.message {
+    height: 50px;
+}
+
+.app-form-label {
+    color: #666;
+    text-transform: capitalize;
+    opacity: 0;
+}
+
 .app-form-control::placeholder {
     color: #666;
 }
 
 .app-form-control:focus {
     border-bottom-color: var(--secondColor);
+
+    &.app-form-label {
+        opacity: 1;
+    }
+}
+
+.form-button-container {
+    display: inline-block;
+    width: 100%;
+    text-align: end;
 }
 
 .app-form-button {
@@ -323,6 +343,7 @@
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    margin-top: 40px;
 }
 
 .app-form-button:hover {
