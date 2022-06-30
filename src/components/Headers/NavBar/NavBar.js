@@ -5,10 +5,7 @@ const NavBar = () => {
     return (
         <>
             <div className='header'>
-                <div className='logo'>
-                    Mohammad <br />
-                    Foysal
-                </div>
+                <h2 className="hero glitch layers" data-text="Mo.Foysal"><span>Mo.Foysal</span></h2>
             </div>
             <div className='nav-container'>
                 <ol>
@@ -18,15 +15,6 @@ const NavBar = () => {
                     <li><Link to="/contact">Contact</Link></li>
                 </ol>
             </div>
-            {/* <div >
-                        <span></span>
-                        <span> </span>
-                        <span></span>
-                        <span></span>
-                    </div> */}
-
-
-
         </>
     );
 };

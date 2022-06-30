@@ -2,19 +2,17 @@
 
 #contact-heading {
     @include breakpoint (tablet-landscape-up) {
-        margin-top: 10px;
         overflow-y: scroll;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     @include breakpoint (tablet-portrait-up) {
-        margin-top: 10px;
         font-size: 40px;
     }
 
     @include breakpoint (mobile) {
         font-size: 40px;
-        padding-top: 20px;
+        margin-top: 20%;
     }
 
     font-size: 60px;
@@ -27,7 +25,9 @@
     @include breakpoint (tablet-landscape-up) {
         flex-direction: column;
         width: 75%;
+        // position: static;
         overflow-y: scroll;
+        // bottom: auto;
     }
 
     @include breakpoint (tablet-portrait-up) {
@@ -60,7 +60,7 @@
         @include breakpoint (mobile) {
             width: 95%;
             margin: auto;
-            margin-top: 25px;
+            margin-top: 20%;
         }
 
         display: flex;
@@ -93,16 +93,20 @@
         width: 100%;
         padding: 1% 1%;
 
+        .location-body {
+            padding: 60px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+        }
+
         a {
             width: 100%;
             font-family: Poppins;
             font-size: large;
-            padding: 1rem;
             height: auto;
             text-decoration: none;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-            text-align: center;
+            text-align: end;
 
             &:hover {
                 color: var(--forthColor);
@@ -115,7 +119,8 @@
 
         .iframe {
             width: 100%;
-            height: 50%;
+            height: 100%;
+            margin-bottom: 20px;
         }
     }
 }
@@ -123,19 +128,25 @@
 
 .screen {
     @include breakpoint (tablet-landscape-up) {
-        width: 90%;
-        // margin-top: 20%;
+        width: 80%;
+        height: 100%;
+        overflow-x: hidden;
     }
 
     @include breakpoint (tablet-portrait-up) {
         width: 100%;
+        height: 100%;
     }
 
     @include breakpoint (mobile) {
         width: 100%;
+        height: 100%;
         margin: auto;
+        margin-top: 20px;
     }
 
+    width: 80%;
+    height: 50%;
     position: relative;
     margin: auto;
     background: var(--mainColor);
@@ -157,6 +168,10 @@
 
 .screen-header {
     @include breakpoint (tablet-landscape-up) {
+        padding: 10px;
+    }
+
+    @include breakpoint (mobile) {
         padding: 10px;
     }
 
@@ -285,6 +300,22 @@
         margin-top: auto;
         font-size: 1rem;
         color: #888;
+    }
+}
+
+.app-social-media {
+    margin-top: auto;
+
+    a {
+        @include breakpoint (mobile) {
+            margin-bottom: 20px;
+        }
+
+        text-decoration: none;
+        margin-top: auto;
+        font-size: 1.5rem;
+        color: #888;
+        margin-right: 10px;
     }
 }
 
