@@ -48,7 +48,7 @@
     width: 90%;
     height: 80vh;
     position: absolute;
-    bottom: 0;
+    // bottom: 0;
 
     // contact info start here
     .contact-info {
@@ -130,6 +130,7 @@
     @include breakpoint (tablet-landscape-up) {
         width: 80%;
         height: 100%;
+        margin-bottom: 10px;
         overflow-x: hidden;
     }
 
@@ -146,7 +147,6 @@
     }
 
     width: 80%;
-    height: 50%;
     position: relative;
     margin: auto;
     background: var(--mainColor);
