@@ -88,7 +88,7 @@ const Contact = () => {
 
                                     <NavLink to={{ pathname: 'https://www.linkedin.com/in/md-foysal-h/' }} target="_blank" rel="noopener noreferrer"><BsLinkedin /></NavLink>
 
-                                    <NavLink to={{ pathname: `${process.env.REACT_APP_WHATSAPP_LINK}` }} target="_blank" rel="noopener noreferrer"><BsWhatsapp /></NavLink>
+                                    <NavLink to={{ pathname: `https://web.whatsapp.com/${process.env.REACT_APP_WHATSAPP_LINK}` }} target="_blank" rel="noopener noreferrer"><BsWhatsapp /></NavLink>
 
                                     <NavLink to={{ pathname: 'https://t.me/Md_Foysal' }} target="_blank" rel="noopener noreferrer"><BsTelegram /></NavLink>
 
