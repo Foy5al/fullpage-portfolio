@@ -120,12 +120,12 @@ const Projects = () => {
                     <div className="project-container">
 
                         <div className='box box1'></div>
-                        <h2>Name: Weather App</h2>
+                        <h2>Name: Health Haven Hospital</h2>
                         <div className='techbox-container'>
                             <p>Technology:</p>
-                            <span className='techbox'>JavaScript</span>
-                            <span className='techbox'>Css</span>
-                            <span className='techbox'>Weather Api</span>
+                            <span className='techbox'>React</span>
+                            <span className='techbox'>Material Ui</span>
+                            <span className='techbox'>React Router</span>
                         </div>
                         <div>
                             <NavLink to={{ pathname: 'https://github.com/Foy5al/healthcare-service-app' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
