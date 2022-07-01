@@ -43,6 +43,10 @@ const Contact = () => {
             });
         form.current.reset();
     }
+
+    /* const whatsAppLinkPush =()=>{
+        window.onload
+    } */
     return (
         <div>
             <Transition timeline={contact} />
@@ -88,9 +92,13 @@ const Contact = () => {
 
                                     <NavLink to={{ pathname: 'https://www.linkedin.com/in/md-foysal-h/' }} target="_blank" rel="noopener noreferrer"><BsLinkedin /></NavLink>
 
-                                    <NavLink to={{ pathname: `https://web.whatsapp.com/send?phone=8801680386886&text=From%20Portfolio%3A` }} target="_blank" rel="noopener noreferrer"><BsWhatsapp /></NavLink>
-
                                     <NavLink to={{ pathname: 'https://t.me/Md_Foysal' }} target="_blank" rel="noopener noreferrer"><BsTelegram /></NavLink>
+
+                                    <NavLink id='WA_mobile_link' to={{ pathname: `https://wa.me/8801680386886?text=From%20Portfolio%3A` }} target="_blank" rel="noopener noreferrer"><BsWhatsapp /></NavLink>
+
+                                    <NavLink id='WA_web_link' to={{ pathname: `https://web.whatsapp.com/send?phone=8801680386886&text=From%20Portfolio%3A` }} target="_blank" rel="noopener noreferrer"><BsWhatsapp /></NavLink>
+
+
 
                                 </div>
                                 <div className="app-contact">Call : <a href="tel:+8801680386886">+8801680386886</a></div>

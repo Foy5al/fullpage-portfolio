@@ -385,3 +385,25 @@
 .app-form-button:hover {
     color: var(--secondColor);
 }
+
+#WA_mobile_link {
+    display: none;
+
+    @include breakpoint (tablet-portrait-up) {
+        display: contents;
+    }
+
+    @include breakpoint (mobile) {
+        display: contents;
+    }
+}
+
+#WA_web_link {
+    @include breakpoint (tablet-portrait-up) {
+        display: none;
+    }
+
+    @include breakpoint (mobile) {
+        display: none;
+    }
+}
