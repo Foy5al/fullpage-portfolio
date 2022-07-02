@@ -138,22 +138,22 @@ h1 {
 
 .project-container .box {
     @include breakpoint(desktop-up) {
-        width: fill;
+        width: stretch;
         height: 400px;
     }
 
     @include breakpoint(tablet-landscape-up) {
-        width: fill;
+        width: stretch;
         height: 400px;
     }
 
     @include breakpoint(tablet-portrait-up) {
-        width: fill;
+        width: stretch;
         height: 300px;
     }
 
     @include breakpoint(mobile) {
-        width: fill;
+        width: stretch;
         height: 280px;
     }
 
