@@ -120,12 +120,32 @@ const Projects = () => {
                     <div className="project-container">
 
                         <div className='box box1'></div>
+                        <h2>Name: Food Express</h2>
+                        <div className='techbox-container'>
+                            <p>Technology:</p>
+
+                            <span className='techbox'>React</span>
+                            <span className='techbox'>Bootstrap</span>
+                            <span className='techbox'>React Router</span>
+                            <span className='techbox'>Firebase</span>
+                            <span className='techbox'>Mongo DB</span>
+                        </div>
+                        <div>
+                            <NavLink to={{ pathname: 'https://github.com/Foy5al/food-express' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
+                            <a href="https://foodiesexpressbd.web.app/" target="_blank" rel="noopener noreferrer">Live preview</a>
+                        </div>
+                    </div>
+                    <div className="project-container">
+
+                        <div className='box box2'></div>
                         <h2>Name: Health Haven Hospital</h2>
                         <div className='techbox-container'>
                             <p>Technology:</p>
+
                             <span className='techbox'>React</span>
                             <span className='techbox'>Material Ui</span>
                             <span className='techbox'>React Router</span>
+                            <span className='techbox'>Firebase</span>
                         </div>
                         <div>
                             <NavLink to={{ pathname: 'https://github.com/Foy5al/healthcare-service-app' }} target="_blank" rel="noopener noreferrer">See Details </NavLink>
@@ -134,7 +154,7 @@ const Projects = () => {
                     </div>
 
                     <div className="project-container">
-                        <div className='box box2'></div>
+                        <div className='box box3'></div>
                         <h2>Name: Skill Squid Eudcation</h2>
                         <div className='techbox-container'>
                             <p>Technology:</p>
@@ -152,12 +172,13 @@ const Projects = () => {
 
                     <div className="project-container">
 
-                        <div className='box box3'></div>
+                        <div className='box box4'></div>
                         <h2>Name: Weather App</h2>
                         <div className='techbox-container'>
                             <p>Technology:</p>
-                            <span className='techbox'>JavaScript</span>
+                            <span className='techbox'>HTML</span>
                             <span className='techbox'>Css</span>
+                            <span className='techbox'>JavaScript</span>
                             <span className='techbox'>Weather Api</span>
                         </div>
                         <div>
